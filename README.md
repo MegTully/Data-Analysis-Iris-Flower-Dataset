@@ -5,6 +5,9 @@ This Project is based off a dataset created by R.A Fisher which contains informa
 # Iris Dataset
 The dataset was downloaded from the UCI website [1] and column headings were added to the .txt file in notepad ++. The dataset was then read into the analysis.py file to be analysed.
 
+# Summary of Variables
+
+
 
 
 
