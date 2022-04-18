@@ -65,7 +65,7 @@ var_PW = np.var(data["PetalWidth"])
 
 print("Standard Deviation:",round(std_PW,2), "\nVariance:",round(var_PW, 2), file=open("Variable Summaries.txt", "a") )
 
-#Summary of Variable PetalWdth[2]
+#Summary of Variable Species
 mean_SpecSL= data.groupby('Species')['SepalLength'].mean().reset_index()
 median_SpecSL = data.groupby('Species')['SepalLength'].median().reset_index()
 min_SpecSL = data.groupby('Species')['SepalLength'].min().reset_index()
@@ -89,13 +89,18 @@ print("Species Sepal Width Statistics ","\nMean\n:", round(mean_SpecSW,1), "\nMe
 print("Species Petal Length Statistics ","\nMean\n:", round(mean_SpecPL,1), "\nMedian:\n",median_SpecPL, "\nMin:\n", min_SpecPL, "\nMax:\n", max_SpecPL, file=open("Variable Summaries.txt", "a"))
 print("Species Petal Width Statistics ","\nMean\n:", round(mean_SpecPW,1), "\nMedian:\n",median_SpecPW, "\nMin:\n", min_SpecPW, "\nMax:\n", max_SpecPW, file=open("Variable Summaries.txt", "a"))
 
+#Histograms
+import matplotlib as plt
+xs= np.data["Species"]
+ys= np.data["SepalLength"]
 
-
- 
-#print(data.shape)
+plt.hist(xs,ys)
+plt.show()
+#graph = data.plot.hist(column=["SepalLength"], by="Species", figsize=(10, 8))
 
 
 #References:
 #[2]https://www.geeksforgeeks.org/python-basics-of-pandas-using-iris-dataset/
 #[3]https://www.w3schools.com/python/python_ml_standard_deviation.asp
 #[4]https://stackoverflow.com/questions/36571560/directing-print-output-to-a-txt-file
+#[5] https://stackoverflow.com/questions/71207177/how-to-calculate-mean-of-specific-rows-in-python-dataframe
