@@ -88,15 +88,3 @@ print("Species Sepal Length Statistics ","\nMean:\n", round(mean_SpecSL,1), "\nM
 print("Species Sepal Width Statistics ","\nMean\n:", round(mean_SpecSW,1), "\nMedian:\n",median_SpecSW, "\nMin:\n", min_SpecSW, "\nMax:\n", max_SpecSW, file=open("Variable Summaries.txt", "a"))
 print("Species Petal Length Statistics ","\nMean\n:", round(mean_SpecPL,1), "\nMedian:\n",median_SpecPL, "\nMin:\n", min_SpecPL, "\nMax:\n", max_SpecPL, file=open("Variable Summaries.txt", "a"))
 print("Species Petal Width Statistics ","\nMean\n:", round(mean_SpecPW,1), "\nMedian:\n",median_SpecPW, "\nMin:\n", min_SpecPW, "\nMax:\n", max_SpecPW, file=open("Variable Summaries.txt", "a"))
-
-#Histograms
-import matplotlib as plt
-from histograms import *
-plt.show()
-
-
-#References:
-#[2]https://www.geeksforgeeks.org/python-basics-of-pandas-using-iris-dataset/
-#[3]https://www.w3schools.com/python/python_ml_standard_deviation.asp
-#[4]https://stackoverflow.com/questions/36571560/directing-print-output-to-a-txt-file
-#[5] https://stackoverflow.com/questions/71207177/how-to-calculate-mean-of-specific-rows-in-python-dataframe
