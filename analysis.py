@@ -18,7 +18,7 @@ print("Sepal Length Statistics","\nMean:", round(mean_SL,1), "\nMedian:",median_
 std_SL = np.std(data["SepalLength"])
 var_SL = np.var(data["SepalLength"])
 
-print("Standard Deviation:",round(std_SL,2), "\nVariance:",round(var_SL, 2), file=open("Variable Summaries.txt", "a") )
+print("Sepal Length Standard Deviation:",round(std_SL,2), "\nVariance:",round(var_SL, 2), file=open("Variable Summaries.txt", "a") )
 
 #Summary of Variable SepalWidth[2]
 mean_SW = data["SepalWidth"].mean()
@@ -33,7 +33,7 @@ print("Sepal Width Statistics ","\nMean:", round(mean_SW,1), "\nMedian:",median_
 std_SW = np.std(data["SepalWidth"])
 var_SW = np.var(data["SepalWidth"])
 
-print("Standard Deviation:",round(std_SW,2), "\nVariance:",round(var_SW, 2),file=open("Variable Summaries.txt", "a") )
+print("Sepal Width Standard Deviation:",round(std_SW,2), "\nVariance:",round(var_SW, 2),file=open("Variable Summaries.txt", "a") )
 
 #Summary of Variable PetalLength[2]
 mean_PL = data["PetalLength"].mean()
@@ -48,7 +48,7 @@ print("Petal Length Statistics ","\nMean:", round(mean_PL,1), "\nMedian:",median
 std_PL = np.std(data["PetalLength"])
 var_PL = np.var(data["PetalLength"])
 
-print("Standard Deviation:",round(std_PL,2), "\nVariance:",round(var_PL, 2), file=open("Variable Summaries.txt", "a") )
+print("Petal Length Standard Deviation:",round(std_PL,2), "\nVariance:",round(var_PL, 2), file=open("Variable Summaries.txt", "a") )
 
 #Summary of Variable PetalWdth[2]
 mean_PW = data["PetalWidth"].mean()
@@ -63,7 +63,7 @@ print("Petal Width Statistics ","\nMean:", round(mean_PW,1), "\nMedian:",median_
 std_PW = np.std(data["PetalWidth"])
 var_PW = np.var(data["PetalWidth"])
 
-print("Standard Deviation:",round(std_PW,2), "\nVariance:",round(var_PW, 2), file=open("Variable Summaries.txt", "a") )
+print("Petal Width Standard Deviation:",round(std_PW,2), "\nVariance:",round(var_PW, 2), file=open("Variable Summaries.txt", "a") )
 
 #Summary of Variable Species
 mean_SpecSL= data.groupby('Species')['SepalLength'].mean().reset_index()
