@@ -25,6 +25,11 @@ For the sepal length of each species of flower all statistics were very similar 
 
 The sepal widths of each species would also make it a challenge to diffrentiate between the 3 flowers. The average width of the iris-setosa, iris-versicolor and iris-virginica sepals are 3.4cm,2.8cm and 3.0cm respectively. The medians are exactly the same as the means. The iris-versicolor has the smallest width of 2.0cm recorded in the dataset. The iris-setosa has the largest sepal width recorded which is 4.4cm.
 
+The petal lengths could be used to diffrentiate between the three types of flower. The shortest average petal length of 1.5cm was in the iris-setosa species group, then the iris-versicolor flowers had a mean of 5.6cm and the iris-virginica had the longest average petal length of 5.6cm. The values in the centre of the datasets were the same as the means. The flower with the max petal length recorded was the iris-virginica at 6.9cm. The longest petal found amongst the iris-setosa and iris-versicolor was a length of 1.9cm and 5.1cm respectively. The min petal length in the dataset was the iris-setosa at 1cm and the iris-versicolor had a shortest petal of length 3cm and iris-virginica was 4.5cm.
+
+The average and median width of the petals on the iris-setosa were very small at 0.2cm. Then not too far off them was the iris-versicolor with a mean and median of 1.3cm and then the iris-virginica with mean and median of 2cm. The iris-virginica has the max value recorded for the petal width at 2.5cm and the iris-setosa has the thinnest width of 0.1cm out of the 150 iris flower samples.
+
+After analysing these statistics it appears that out of the three iris species that in general iris-setosa's have the smallest petals and iris-virginica's have largest petals. It is also evident that iris-setosa's have the shortest sepal length of the three species but also have the widest sepal widths in the recorded data. The iris-virginica's have the longest recorded sepal lengths and iris-versicolor's have smallest sepal widths of all the flowers. 
 
 
 
