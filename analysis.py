@@ -94,6 +94,10 @@ import matplotlib as plt
 from histograms import *
 plt.show()
 
+#Scatterplots
+from scatterplots import *
+plt.show()
+
 
 #References:
 #[2]https://www.geeksforgeeks.org/python-basics-of-pandas-using-iris-dataset/

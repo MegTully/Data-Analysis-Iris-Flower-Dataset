@@ -31,6 +31,12 @@ The average and median width of the petals on the iris-setosa were very small at
 
 After analysing these statistics it appears that out of the three iris species that in general iris-setosa's have the smallest petals and iris-virginica's have largest petals. It is also evident that iris-setosa's have the shortest sepal length of the three species but also have the widest sepal widths in the recorded data. The iris-virginica's have the longest recorded sepal lengths and iris-versicolor's have smallest sepal widths of all the flowers. 
 
+# Correlation between variables
+When analysing this dataset I was curious to see if there was any relationship between the lengths and widths of the sepals and the lengths and widths of the petals. For example if they sepal lengths are long then so are the petals or if the sepal widths are small then sepal lengths are large. I used the seaborn package to carry out this analysis[16]. For the code I researched how to use seaborn for multivariate data plots and I decided to use the "seaborn.pairplot" function as I think it displays the relationships between the variables well. Within this function I read in the dataset under the variable name data, set the hue parameter to "Species" because I wanted to look at the relationships of each variable based on the type of species and set the parameter kind equal to "scatter" because after trying a few plots the scatterplot proved to be easiest read and understand as you can clearly see the distance between the clusters of data which shows the closeness of their relationships with each other. Then I set the markers parameters to dots, stars and squares to represent the iris-setosa's, iris-versicolor's and iris-virginica's respectively so that aswell as the different colours this helps distinguish between species and lastly I set the height of the graphs equal to 5cm[16]. I then displayed the graph [17] and saved it as a png file [11].
+
+
+sb.pairplot(data, hue= "Species",kind="scatter", markers=["o","*","s"], height= 5)
+
 
 
 
@@ -50,3 +56,7 @@ After analysing these statistics it appears that out of the three iris species t
 [11]https://chartio.com/resources/tutorials/how-to-save-a-plot-to-a-file-using-matplotlib/
 [12]https://www.statisticshowto.com/probability-and-statistics/standard-deviation/
 [13]https://www.investopedia.com/ask/answers/021215/what-difference-between-standard-deviation-and-variance.asp
+[14]https://datavizpyr.com/how-to-color-scatterplot-by-a-variable-in-matplotlib/
+[15]https://datavizpyr.com/add-legend-to-scatterplot-colored-by-a-variable-with-matplotlib-in-python/
+[16]https://seaborn.pydata.org/generated/seaborn.pairplot.html
+[17]https://www.adamsmith.haus/python/answers/how-to-display-a-seaborn-plot-in-python
