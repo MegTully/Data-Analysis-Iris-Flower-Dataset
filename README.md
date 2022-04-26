@@ -31,8 +31,37 @@ The average and median width of the petals on the iris-setosa were very small at
 
 After analysing these statistics it appears that out of the three iris species that in general iris-setosa's have the smallest petals and iris-virginica's have largest petals. It is also evident that iris-setosa's have the shortest sepal length of the three species but also have the widest sepal widths in the recorded data. The iris-virginica's have the longest recorded sepal lengths and iris-versicolor's have smallest sepal widths of all the flowers. 
 
-# Histograms
-Next I displayed the dataset using histograms. The following packages were imported and used for this section of code, Pandas as pd, Numpy as np and matplotlib.pyplot as plt. The iris dataset was read in as variable name "data". I used the .hist() function to create a histogram [6][7] and assigned the plot a variable name "graph". For each variable sepal length, sepal width, petal length and petal width I plotted 3 subplots showing the variables prroperites for each species. The first set of histograms, "Histogram_SepalLength", had "column" parameter equal to "SepalLength" so the x-axis represents the measurements recorded for each flower then the "by" parameter was equal to species to group each histogram based on which type of species the measurements correspond to. The next parameter in the .hist() function is "bins" which is the amount of clusters you want to put the data into so I chose 50 because I want to see each of the 50 measurements plotted separaretly instead of being joined with measurements near each other, this makes it easier to read and inspect the graph. The "legend" parameter was set to true so the it is clear what the bars on the graph represent with the legend in to top right corner of the graph. "grid" is set to True to show the axes grid lines. "figsize" sets the size of the graph, I just played with these numbers until a nice size was found and then "layout()" parameter set the layout for the 3 subplots in which I set it to be 3 rows and 1 on top of another. The colour of the bars were set to "m" which represents a pinky magenta colour.
+# Histograms- Coding
+Next I displayed the dataset using histograms. The following packages were imported and used for this section of code, Pandas as pd, Numpy as np and matplotlib.pyplot as plt. The iris dataset was read in as variable name "data". I used the .hist() function to create a histogram [6][7] and assigned the plot a variable name "graph". For each variable sepal length, sepal width, petal length and petal width I plotted 3 subplots showing the variables prroperites for each species. The first set of histograms, "Histogram_SepalLength", had "column" parameter equal to "SepalLength" so the x-axis represents the measurements recorded for each flower then the "by" parameter was equal to species to group each histogram based on which type of species the measurements correspond to. The next parameter in the .hist() function is "bins" which is the amount of clusters you want to put the data into so I chose 50 because I want to see each of the 50 measurements plotted separaretly instead of being joined with measurements near each other, this makes it easier to read and inspect the graph. The "legend" parameter was set to true so the it is clear what the bars on the graph represent with the legend in to top right corner of the graph. "grid" is set to True to show the axes grid lines. "figsize" sets the size of the graph, I just played with these numbers until a nice size was found and then "layout()" parameter set the layout for the 3 subplots in which I set it to be 3 rows and 1 on top of another. The colour of the bars were set to "m" which represents a pinky magenta colour. The next line of code sets the title of the x-axis to "Sepal Length(cm)" using the plt.xlabel function. I created a for loop to set the title of the y-axis in all the subplots to be "Count" using the ".set(ylabel="")" function and also to rotate the ticks along the x-axis to 0degrees to make the graph look neater, the ".tick_params(axis='x', labelrotation = 0)" function did this. Lastly I used the plt.savefig() function to output the histograms to a png file [11][15]. I used the same code for each group of subplots.
+
+# Histograms - Analysis
+Sepal Length Histograms: 
+These 3 histograms for each species appear to be normally distributed as they have a bell shaped curve.
+
+-After observering the histogram subplots I saw that the measurement recorded most amount of times for the    Iris-Setosa was both 5.0cm and 5.1cm which both had 8 recordings each. The least frequent measurements only  recorded once were 4.3cm,4.5cm,5.3cm and 5.8cm which is also the longest sepal length.
+
+-For the Iris-Versicolor the most frequent measurements for sepal length all occuring 5 times each were 5.5cm,5.6cm and 5.7cm. There are 10 measurements in this set that were only recorded once
+
+-For the Iris-Virginica the majority of the sepal lengths were around 6.3cm.
+
+Sepal Width Histograms:
+-The Iris-Setosa had 8 occurences of the measurement 3.4cm which explains why it is also it's mean and that the graph is normally distributed.
+
+-The Iris-Versicolor also had 8 recorded measurements of 3.0cm, although these is the most frequent measurement it is larger than it's mean which means we get a graph that is skewed right.
+
+-Close to a quarter of the 50 measurements recorded for Iris-Virginica were 3.0cm which is also it's mean so this graph was normally distributed.
+
+Petal Length Histograms:
+-14 out of 50 of the petal length recordings for Iris-Setosa were 1.5cm which is also clearly the mean.
+
+-The Iris-Versicolor and Iris-Virginica both had a highest count of 7 for the respective measurements 4.5cm and 5.1cm.
+
+Petal Width Histograms:
+-The tallest bar seen out of all the histograms was for Iris-Setosa for petal width of 0.2cm. 58% of Iris-Setosa's petal widths recorded were 0.2cm.
+
+-Iris-Versicolor had a count of 13 for it's most common measurement of 1.3cm.
+
+-Iris-Virginica had 1.8cm as it's most frequent measurement.
 
 # Correlation Between Variables
 When analysing this dataset I was curious to see if there was any relationship between the lengths and widths of the sepals and the lengths and widths of the petals. For example if they sepal lengths are long then so are the petals or if the sepal widths are small then sepal lengths are large. I used the seaborn package to carry out this analysis[16]. For the code I researched how to use seaborn for multivariate data plots and I decided to use the "seaborn.pairplot" function as I think it displays the relationships between the variables well. Within this function I read in the dataset under the variable name data, set the hue parameter to "Species" because I wanted to look at the relationships of each variable based on the type of species and set the parameter kind equal to "scatter" because after trying a few plots the scatterplot proved to be easiest read and understand as you can clearly see the distance between the clusters of data which shows the closeness of their relationships with each other. Then I set the markers parameters to dots, stars and squares to represent the iris-setosa's, iris-versicolor's and iris-virginica's respectively so that aswell as the different colours this helps distinguish between species and lastly I set the height of the graphs equal to 3cm because when I set it abover 3cm all the information didn't print to the screen[16]. I then displayed the graph [17] and saved it as a png file [11].
