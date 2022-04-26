@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 data = pd.read_csv("C:/Users/Owner/Desktop/pands-project/pands-project/pands-project/iris.txt")
 
 #create histogram the counts the flowers with same sepal length and group by species and set parameters[6][7]
-graph = data.hist(column='SepalLength', by='Species', bins=50, legend=True, grid=True, figsize=(8,9), 
+graph = data.hist(column='SepalLength', by='Species', bins= 50 , legend=True, grid=True, figsize=(8,9), 
 layout=(3,1), color='m')
 
 #Set x-axis label that represents x-axis for all subplots[7]
@@ -34,7 +34,7 @@ for ax in graph1.flat:
     ax.tick_params(axis='x', labelrotation = 0)
 
 #Save histogram as png file[11][15]
-plt.savefig('SepalWidth.png',format="png")
+plt.savefig('Histogram_SepalWidth.png',format="png")
 
 #create histogram the counts the flowers with same petal length and group by species and set parameters[6][7]
 graph2 = data.hist(column='PetalLength', by='Species', bins=50, legend=True, grid=True, figsize=(8,9), 
@@ -66,11 +66,3 @@ plt.savefig('Histogram_PetalWidth.png',format="png")
     
 #Display Graphs
 plt.show()
-
-#References
-#[6]https://mode.com/example-gallery/python_histogram/
-#[7]https://dataindependent.com/pandas/pandas-histogram-dataframe-hist/
-#[8]https://matplotlib.org/stable/gallery/subplots_axes_and_figures/subplots_demo.html
-#[9]https://stackabuse.com/rotate-axis-labels-in-matplotlib/
-#[10]https://www.w3schools.com/colors/colors_mixer.asp?colorbottom=00FF00&colortop=FFFFFF
-#[11]https://chartio.com/resources/tutorials/how-to-save-a-plot-to-a-file-using-matplotlib/
