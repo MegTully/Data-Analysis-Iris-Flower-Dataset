@@ -1,4 +1,5 @@
-# pands-project
+# Pands-Project
+## Author Megan Tully
 
 This Project is based off a dataset created by R.A Fisher which contains information about three types of iris plants. There are 4 attributes used to differentiate each plant class, they are petal length, petal width, sepal length and sepal width. The three iris flower types are iris setosa, iris versicolor and iris virginica[1].
 
@@ -63,11 +64,13 @@ Petal Width Histograms:
 
 -Iris-Virginica had 1.8cm as it's most frequent measurement.
 
-# Correlation Between Variables
-When analysing this dataset I was curious to see if there was any relationship between the lengths and widths of the sepals and the lengths and widths of the petals. For example if they sepal lengths are long then so are the petals or if the sepal widths are small then sepal lengths are large. I used the seaborn package to carry out this analysis[16]. For the code I researched how to use seaborn for multivariate data plots and I decided to use the "seaborn.pairplot" function as I think it displays the relationships between the variables well. Within this function I read in the dataset under the variable name data, set the hue parameter to "Species" because I wanted to look at the relationships of each variable based on the type of species and set the parameter kind equal to "scatter" because after trying a few plots the scatterplot proved to be easiest read and understand as you can clearly see the distance between the clusters of data which shows the closeness of their relationships with each other. Then I set the markers parameters to dots, stars and squares to represent the iris-setosa's, iris-versicolor's and iris-virginica's respectively so that aswell as the different colours this helps distinguish between species and lastly I set the height of the graphs equal to 3cm because when I set it abover 3cm all the information didn't print to the screen[16]. I then displayed the graph [17] and saved it as a png file [11].
+# Scatterplots For Each Pair Of Variables Showing The Correlation Between Variables
+When analysing this dataset I was curious to see if there was any relationship between the lengths and widths of the sepals and the lengths and widths of the petals. For example if the sepal lengths are long then so are the petals or if the sepal widths are small then sepal lengths are large. I used the seaborn package to carry out this analysis[16]. For the code I researched how to use seaborn for multivariate data plots[18] and I decided to use the "seaborn.pairplot" function as I think it displays the relationships between the variables well. Within this function I read in the dataset under the variable name data, set the hue parameter to "Species" because I wanted to look at the relationships of each variable based on the type of species and set the parameter kind equal to "scatter" because after trying a few plots the scatterplot proved to be easiest read and understand as you can clearly see the distance between the clusters of data which shows the closeness of their relationships with each other i.e how similar each flower is to another. Then I set the markers parameters to dots, stars and squares to represent the iris-setosa's, iris-versicolor's and iris-virginica's respectively so that aswell as the different colours this helps distinguish between species and lastly I set the height of the graphs equal to 3cm because when I set it abover 3cm all the information didn't print to the screen[16]. I then displayed the graph [17] and saved it as a png file [11].
 
 # Analysing The Pairplot
-The diagonal in the pairplot represents univariate data so like our histograms they just show the count for each variable but are displayed using density plots.
+The diagonal in the pairplot represents univariate data so like our histograms they just show the count for each variable but are displayed using density plots. The scatterplots are divided into 2 trianges separated by the diagonal with the density plots, both the upper and lower triangle contain the same information except the x and y axes are swapped so if sepal width is the y-axis and sepal length is the x-axis in lower triangle then in its corresponding plot in the upper triangle will have sepal length on the y-axis and sepal width on the x-axis. For my analysis I will just look at the lower triangle. 
+
+The first pairplot in the lower triangle is the second row first column. This plot shows there is a positive correlation between the sepal length and sepal width of all three flowers but it is especially evident in the Iris-Setosa as you can see a steep incine
 
 
 
@@ -93,3 +96,4 @@ The diagonal in the pairplot represents univariate data so like our histograms t
 [15]https://datavizpyr.com/add-legend-to-scatterplot-colored-by-a-variable-with-matplotlib-in-python/
 [16]https://seaborn.pydata.org/generated/seaborn.pairplot.html
 [17]https://www.adamsmith.haus/python/answers/how-to-display-a-seaborn-plot-in-python
+[18]https://towardsdatascience.com/visualizing-data-with-pair-plots-in-python-f228cf529166
