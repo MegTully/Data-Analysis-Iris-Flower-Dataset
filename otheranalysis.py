@@ -1,17 +1,22 @@
-#Finding the correlation between variablesusing seaborn package[16]
-import seaborn as sb
+#Finding the correlation between variables Pearson's correlation coefficient[19]
 import pandas as pd
+import seaborn as sb
 import matplotlib.pyplot as plt
 
-#Read in the dataset under variable name data
 data = pd.read_csv("C:/Users/Owner/Desktop/pands-project/pands-project/pands-project/iris.txt")
 
-#plot multivariate graph and specify the parameters
-sb.pairplot(data, hue= "Species",kind="scatter", markers=["o","*","s"], height= 3)
+#want to get the correlation coefficient, need to specify groupby to get correlation for each species[20][2]
+correlation=data.groupby("Species").corr(method='pearson')
+#print the output to a .txt file[4]
+print(correlation,file=open("Correlation_Tables.txt", "w"))
 
-#Displey the graph
-plt.show()
+#correlation coefficients of the dataset not including or grouping by species
+corr2=data.corr(method='pearson')
+#print the output to a .txt file[4]
+print(corr2,file=open("Correlation_Tables.txt", "a"))
 
-#Save pairplot as png file[11]
-plt.savefig('Multivariate_Pairplot.png', format="png")
-
+#sb.heatmap(data.corr(method='pearson').drop(
+ # ['Id'], axis=1).drop(['Id'], axis=0),
+ #           annot = True);
+  
+#plt.show()
