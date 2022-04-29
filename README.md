@@ -92,6 +92,13 @@ The correlation coefficients for Iris-Versicolor are all positive and above 0.5 
 
 For the Iris-Verginica I was most surprised as I had interpretted it to have the same correlations as the Iris-Versicolor but it is evident that other than petal width vs sepal width and sepal length vs petal length, the rest of the relationships have a weak positive relationship. Just as in the Iris-Setosa calculations I was most inaccurate when interpretting petal length and width as it only has correlation coefficient of 0.32.
 
+## Further analysis on the correlation coefficients
+When first carrying out the above calculations for correlation coefficients I forgot that I needed to group by species and I printed a table of correlation coefficients for each variable not including species and I noticed alot of negative correlation coefficients. I was confused at first but then found it very interesting that even though for all three individual species there was no negative relationships but when you look at the dataset as a whole and analyse the sepals and petals properties in general there are negative influences in some cases.
+
+After having another look at the pairplots I saw that the correlation coefficients do match up. There is a very weak negative correlation for petal length vs sepal width. The negative relationship between sepal width and length and between petal width and sepal width is more evident. They both have a moderate negative slope, this means that as sepal length increases sepal width decreases and as sepal width increases petal width decreases and vice versa. 
+
+After researching the factors that affect the correlation [21] I have come to the conclusion the reason the correlation may have changed from positive to negative when analysing the dataset overall vs grouping by species could be because of the difference in some distribution shapes as some are skewed distributions aswell as normal distributions. It could also be due to outliers in the dataset but I don't think this is the reason as there are not that many outliers. I think the most viable reason is because of the variability in the dataset because the measurements for each type of flower are within different scale ranges. For example if you have three clusters of data placed in the plot in a position that appears to be a declining slope but within the clusters the data displays an increasing slope. After discovering this I believe it is more accurate to analyse the data grouped by type or else normalise the scales so that the size of measurements recorded don't affect the results.
+
 
 
 
@@ -123,3 +130,4 @@ For the Iris-Verginica I was most surprised as I had interpretted it to have the
 [18]https://towardsdatascience.com/visualizing-data-with-pair-plots-in-python-f228cf529166
 [19]https://www.statisticshowto.com/probability-and-statistics/correlation-coefficient-formula/
 [20]https://www.statology.org/pandas-groupby-correlation/
+[21]https://www.tandfonline.com/doi/abs/10.3200/JEXE.74.3.249-266
