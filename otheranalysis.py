@@ -11,6 +11,13 @@ correlation=data.groupby("Species").corr(method='pearson')
 #print the output to a .txt file[4]
 print(correlation,file=open("Correlation_Tables.txt", "w"))
 
+#Plot a heat map using colours to help visualise correlation between each pair of variables and save image[22]
+map=sb.heatmap(correlation)
+#set x and y labels and a title [22]
+map.set(xlabel='\nIRIS Flower Details', ylabel='IRIS Flower Details\t', title = "Correlation matrix of IRIS data\n")
+#bbox_inches aligns the image so you can see all the labels[23]
+plt.savefig("Correlation_HeatMap.png", bbox_inches='tight')
+
 #correlation coefficients of the dataset not including or grouping by species
 corr2=data.corr(method='pearson')
 #print the output to a .txt file[4]
@@ -45,8 +52,3 @@ np.reshape(df_scaled, (-1,1))
 df_scaled
 
 
-#sb.heatmap(data.corr(method='pearson').drop(
- # ['Id'], axis=1).drop(['Id'], axis=0),
- #           annot = True);
-  
-#plt.show()

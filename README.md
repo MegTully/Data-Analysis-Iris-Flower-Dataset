@@ -39,7 +39,7 @@ Next I displayed the dataset using histograms. The following packages were impor
 
 ![Sepal Length Histogram](Histogram_SepalLength.png)
 
-Sepal Length Histograms: 
+## Sepal Length Histograms: 
 These three histograms for each species appear to be normally distributed as they have a bell shaped curve.
 
 -After observering the histogram subplots I saw that the measurement recorded most amount of times for the    Iris-Setosa was both 5.0cm and 5.1cm which both had 8 recordings each. The least frequent measurements only  recorded once were 4.3cm,4.5cm,5.3cm and 5.8cm which is also the longest sepal length.
@@ -50,7 +50,7 @@ These three histograms for each species appear to be normally distributed as the
 
 ![Sepal Width Histogram](Histogram_SepalWidth.png)
 
-Sepal Width Histograms:
+## Sepal Width Histograms:
 -The Iris-Setosa had 8 occurences of the measurement 3.4cm which explains why it is also it's mean and that the graph is normally distributed.
 
 -The Iris-Versicolor also had 8 recorded measurements of 3.0cm, although these is the most frequent measurement it is larger than it's mean which means we get a graph that is skewed right.
@@ -59,14 +59,14 @@ Sepal Width Histograms:
 
 ![Petal Length Histogram](Histogram_petalLength.png)
 
-Petal Length Histograms:
+## Petal Length Histograms:
 -14 out of 50 of the petal length recordings for Iris-Setosa were 1.5cm which is also clearly the mean.
 
 -The Iris-Versicolor and Iris-Virginica both had a highest count of 7 for the respective measurements 4.5cm and 5.1cm.
 
 ![Petal Width Histogram](Histogram_PetalWidth.png)
 
-Petal Width Histograms:
+## Petal Width Histograms:
 -The tallest bar seen out of all the histograms was for Iris-Setosa for petal width of 0.2cm. 58% of Iris-Setosa's petal widths recorded were 0.2cm.
 
 -Iris-Versicolor had a count of 13 for it's most common measurement of 1.3cm.
@@ -95,7 +95,7 @@ The next pairplot to the right of the previous one displays petal width against 
 The last pairplot in the lower triangles demonstrates petal length vs petal width. For all three species this graph shows the strongest correlation between any two variables, all of the flowers have points sitting on or very close to the straight diagonal line x=y. This means that you can be certain that as petal widths increase then so do petal lengths at the same increase rate, they have a linear relationship. The similarities are the same as all our previous plots therefore it can be said that for all sepal and petal properties the Iris-Setosa has most dissimilarities and the other two flowers are very similar.
 
 # Further analysis
-Sometimes graphs can be difficult to read accurately and therefore are misinterpretted. For example I might think two clusters of data are very dissimilar if there is a good distance between them but the scale of the distances could be very small so they are not as far as it appears so to check my analysis for my pairplots I decided to calculate the correlation coefficient for each subplot. The correlation coefficient [19] is a number calculated the shows how strong a relationship two variables have with each other i.e does one variable influence the growth of the other variable and if so is it a negative influence or a positive one. The correlation coefficients is between 1 and -1 where 1 indicates a strong positive relationship, 0 represents no relationship and -1 represents a strong negative relationship. I used Pearson's correlation coefficient method in my code because it's the most popular [19]. The function I used in the code was ".corr(method="pearson")" [2], this created a table with all the correlation coefficients that I printed to a .txt file called "Correlation_Tables.txt" so it can be easily accessed[4]. I added in the code "groupby("Species")" to specify the correlation coefficient for each species[20].
+Sometimes graphs can be difficult to read accurately and therefore are misinterpretted. For example I might think two clusters of data are very dissimilar if there is a good distance between them but the scale of the distances could be very small so they are not as far as it appears so to check my analysis for my pairplots I decided to calculate the correlation coefficient for each subplot. The correlation coefficient [19] is a number calculated the shows how strong a relationship two variables have with each other i.e does one variable influence the growth of the other variable and if so is it a negative influence or a positive one. The correlation coefficients is between 1 and -1 where 1 indicates a strong positive relationship, 0 represents no relationship and -1 represents a strong negative relationship. I used Pearson's correlation coefficient method in my code because it's the most popular [19]. The function I used in the code was ".corr(method="pearson")" [2], this created a table with all the correlation coefficients that I printed to a .txt file called "Correlation_Tables.txt" so it can be easily accessed[4]. I added in the code "groupby("Species")" to specify the correlation coefficient for each species[20]. I also plotted a heatmap just to help visualize the correlation coefficient between each pair of vairiables and saved it as a png file[22]. I set x and y labels and a title and used a function called "bbox_inches="tight"" with "plt.savefig()" in order to stop the png file cutting off the x and y axis labels[23].
 
 ## Analysis of correlation coefficients for species
 The diagonal in the three tables is equal to 1 because it is measuring the the relationship between each variable and itself which is obviously the strongest relationship they can get. For the Iris-Setosa it only has one strong positive correlation coefficient of 0.75 for sepal width and sepal length which is close to 1. The rest of it's correlation coefficients are close to 0 showing no/very weak relationships. In comparison to my analysis of the pairplots it confirms my interpretations were accurate except for the reltionship between petal lengths and widths. This surprised me because I expected the correlation to be close to one but it has a weak correlation coefficient of 0.31. After taking another look at this pairplot I can see that if the points were plotted on a magnified scale between 0cm and 2cm then it may look like less of an incline.
@@ -103,6 +103,10 @@ The diagonal in the three tables is equal to 1 because it is measuring the the r
 The correlation coefficients for Iris-Versicolor are all positive and above 0.5 so there is a correlation there between each relationship but the strongest are between sepal length and petal length and between petal width and length. This confirms I accurately interpretted the pairplots for this species.
 
 For the Iris-Verginica I was most surprised as I had interpretted it to have the same correlations as the Iris-Versicolor but it is evident that other than petal width vs sepal width and sepal length vs petal length, the rest of the relationships have a weak positive relationship. Just as in the Iris-Setosa calculations I was most inaccurate when interpretting petal length and width as it only has correlation coefficient of 0.32.
+
+To help visualize the correlation coefficients the heatmap below[24] shows how strong or weak the correlation between each pair of variables is using colour. The scale is shown on the right hand side of the map where you can see the weaker a correlation is it tends towards dark purple and the stronger tends towards white.
+
+![Heatmap](Correlation_HeatMap.png)
 
 ## Further analysis on the correlation coefficients
 When first carrying out the above calculations for correlation coefficients I forgot that I needed to group by species and I printed a table of correlation coefficients for each variable not including species and I noticed alot of negative correlation coefficients. I was confused at first but then found it very interesting that even though for all three individual species there was no negative relationships but when you look at the dataset as a whole and analyse the sepals and petals properties in general there are negative influences in some cases.
@@ -143,3 +147,6 @@ After researching the factors that affect the correlation [21] I have come to th
 [19]https://www.statisticshowto.com/probability-and-statistics/correlation-coefficient-formula/
 [20]https://www.statology.org/pandas-groupby-correlation/
 [21]https://www.tandfonline.com/doi/abs/10.3200/JEXE.74.3.249-266
+[22]https://www.stackvidhya.com/plot-correlation-matrix-in-pandas-python/#:~:text=You%20can%20plot%20correlation%20between,'column_2'%5D)%20snippet.&text=You%20can%20see%20the%20correlation%20of%20the%20two,the%20dataframe%20as%20a%20scatterplot.
+[23]https://stackoverflow.com/questions/51568083/matplotlib-and-seaborn-heatmap-renders-differently-in-jupyter-to-savefig-labels
+[24]https://stackoverflow.com/questions/14494747/how-to-add-images-to-readme-md-on-github
