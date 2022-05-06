@@ -36,6 +36,9 @@ After analysing these statistics it appears that out of the three iris species t
 Next I displayed the dataset using histograms. The following packages were imported and used for this section of code, Pandas as pd, Numpy as np and matplotlib.pyplot as plt. The iris dataset was read in as variable name "data". I used the .hist() function to create a histogram [6][7] and assigned the plot a variable name "graph". For each variable sepal length, sepal width, petal length and petal width I plotted three subplots showing the variables prroperites for each species. The first set of histograms, "Histogram_SepalLength", had "column" parameter equal to "SepalLength" so the x-axis represents the measurements recorded for each flower then the "by" parameter was equal to species to group each histogram based on which type of species the measurements correspond to. The next parameter in the .hist() function is "bins" which is the amount of clusters you want to put the data into so I chose 50 because I want to see each of the 50 measurements plotted separaretly instead of being joined with measurements near each other, this makes it easier to read and inspect the graph. The "legend" parameter was set to true so the it is clear what the bars on the graph represent with the legend in to top right corner of the graph. "grid" is set to True to show the axes grid lines. "figsize" sets the size of the graph, I just played with these numbers until a nice size was found and then "layout()" parameter set the layout for the three subplots in which I set it to be three rows and one on top of another. The colour of the bars were set to "m" which represents a pinky magenta colour. The next line of code sets the title of the x-axis to "Sepal Length(cm)" using the plt.xlabel function. I created a for loop to set the title of the y-axis in all the subplots to be "Count" using the ".set(ylabel="")" function and also to rotate the ticks along the x-axis to 0degrees to make the graph look neater, the ".tick_params(axis='x', labelrotation = 0)" function did this. Lastly I used the plt.savefig() function to output the histograms to a png file [11][15]. I used the same code for each group of subplots.
 
 # Histograms - Analysis
+
+![Sepal Length Histogram](Histogram_SepalLength.png)
+
 Sepal Length Histograms: 
 These three histograms for each species appear to be normally distributed as they have a bell shaped curve.
 
@@ -44,6 +47,8 @@ These three histograms for each species appear to be normally distributed as the
 -For the Iris-Versicolor the most frequent measurements for sepal length all occuring five times each were 5.5cm,5.6cm and 5.7cm. There are 10 measurements in this set that were only recorded once
 
 -For the Iris-Virginica the majority of the sepal lengths were around 6.3cm.
+
+![Sepal Width Histogram](Histogram_SepalWidth.png)
 
 Sepal Width Histograms:
 -The Iris-Setosa had 8 occurences of the measurement 3.4cm which explains why it is also it's mean and that the graph is normally distributed.
@@ -59,6 +64,8 @@ Petal Length Histograms:
 
 -The Iris-Versicolor and Iris-Virginica both had a highest count of 7 for the respective measurements 4.5cm and 5.1cm.
 
+![Petal Width Histogram](Histogram_PetalWidth.png)
+
 Petal Width Histograms:
 -The tallest bar seen out of all the histograms was for Iris-Setosa for petal width of 0.2cm. 58% of Iris-Setosa's petal widths recorded were 0.2cm.
 
@@ -70,6 +77,9 @@ Petal Width Histograms:
 When analysing this dataset I was curious to see if there was any relationship between the lengths and widths of the sepals and the lengths and widths of the petals. For example if the sepal lengths are long then so are the petals or if the sepal widths are small then sepal lengths are large. I used the seaborn package to carry out this analysis[16]. For the code I researched how to use seaborn for multivariate data plots[18] and I decided to use the "seaborn.pairplot" function as I think it displays the relationships between the variables well. Within this function I read in the dataset under the variable name data, set the hue parameter to "Species" because I wanted to look at the relationships of each variable based on the type of species and set the parameter kind equal to "scatter" because after trying a few plots the scatterplot proved to be easiest read and understand as you can clearly see the distance between the clusters of data which shows the closeness of their relationships with each other i.e how similar each flower is to another. Then I set the markers parameters to dots, stars and squares to represent the Iris-Setosa's, Iris-Versicolor's and Iris-Virginica's respectively so that aswell as the different colours this helps distinguish between species and lastly I set the height of the graphs equal to 3cm because when I set it abover 3cm all the information didn't print to the screen[16]. I then displayed the graph [17] and saved it as a png file [11].
 
 ## Analysing The Pairplot
+
+![Pairplots](Pairplots.png)
+
 The diagonal in the pairplot represents univariate data so like our histograms they just show the count for each variable but are displayed using density plots. The scatterplots are divided into two trianges separated by the diagonal with the density plots, both the upper and lower triangle contain the same information except the x and y axes are swapped so if sepal width is the y-axis and sepal length is the x-axis in lower triangle then in its corresponding plot in the upper triangle will have sepal length on the y-axis and sepal width on the x-axis. For my analysis I will just look at the lower triangle. 
 
 The first pairplot in the lower triangle is the second row first column. This plot shows there is a positive correlation between the sepal length and sepal width of all three flowers but it is especially evident in the Iris-Setosa(represented by blue dots) as you can see a steep incline which translates to the sepal length increases as the sepal length increase. For the Iris-Versicolor(represented by orange stars) and Iris-Virginica(represented by green squares) the incline is alot more suble because there are a few outliers, it is also noticeable for these two flowers that they are almost the same in similarities with regards to sepal lengths and widths as their data points are on top of each other in this plot. This would make it hard to distinguish between them in a field when looking these properties but it would be easier to point out an Iris-Setosa as it appears to have smaller sepals.
