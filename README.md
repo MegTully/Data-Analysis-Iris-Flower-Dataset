@@ -53,6 +53,7 @@ Sepal Width Histograms:
 -Close to a quarter of the 50 measurements recorded for Iris-Virginica were 3.0cm which is also it's mean so this graph was normally distributed.
 
 ![Petal Length Histogram](Histogram_petalLength.png)
+
 Petal Length Histograms:
 -14 out of 50 of the petal length recordings for Iris-Setosa were 1.5cm which is also clearly the mean.
 
