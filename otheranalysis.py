@@ -45,10 +45,10 @@ print(np.corrcoef(normalized_arr3,normalized_arr2))
 print(np.corrcoef(normalized_arr4,normalized_arr2))
 
 
-scaler = preprocessing.MinMaxScaler()
-names=["SepalLength","SepalWidth","PetalLength","PetalWidth"]
-df_scaled = pd.DataFrame(scaler.fit_transform(data["PetalLength"]), columns=data.columns)
-np.reshape(df_scaled, (-1,1))
-df_scaled
+#scaler = preprocessing.MinMaxScaler()
+#names=["SepalLength","SepalWidth","PetalLength","PetalWidth"]
+#df_scaled = pd.DataFrame(scaler.fit_transform(data["PetalLength"]), columns=data.columns)
+#np.reshape(df_scaled, (-1,1))
+#df_scaled
 
 
