@@ -122,13 +122,6 @@ I decided to try and normalise the data and then get the correlation coefficient
 In conclusion I don't think that normalising the data is the reason for the different correlations when grouping by species vs the whole data set minus the species variable. This is based on my findings however I also think that if I had more to time and knowledge about normalising data I might have gotten different results. Therefore I believe the difference in correlations is due to the different distribution shapes.
 
 
-
-
-
-
-
-
-
 # References
 [1] https://archive.ics.uci.edu/ml/datasets/iris
 [2]https://www.geeksforgeeks.org/python-basics-of-pandas-using-iris-dataset/
